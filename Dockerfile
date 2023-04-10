@@ -1,19 +1,20 @@
-FROM ubuntu:22.04
+FROM ubuntu:18.04
 
 RUN DEBIAN_FRONTEND=noninteractive && \
 	apt-get update && \
 	apt-get install -y \
 		gcc g++ gfortran \
 		libc++-dev \
-		libstdc++-9-dev zlib1g-dev \
+		libstdc++-6-dev zlib1g-dev \
 		automake autoconf libtool \
 		git subversion \
 		libatlas3-base \
 		nvidia-cuda-dev \
 		ffmpeg \
 		python3 python3-dev python3-pip \
-		python2 python2-dev \
+		python python-dev python-pip \
 		wget unzip && \
+		apt-get upgrade -y && \
 	apt-get clean
 
 ADD ext /gentle/ext
