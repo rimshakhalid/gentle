@@ -1,5 +1,9 @@
 FROM ubuntu:18.04
 
+RUN curl -sL https://nvidia.github.io/nvidia-docker/gpgkey | apt-key add -
+RUN distribution=$(. /etc/os-release;echo $ID$VERSION_ID) && \
+    curl -sL https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | tee /etc/apt/sources.list.d/nvidia-docker.list
+
 RUN DEBIAN_FRONTEND=noninteractive && \
 	apt-get update && \
 	apt-get install -y \
