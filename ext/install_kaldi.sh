@@ -1,5 +1,9 @@
 #!/bin/bash
 
+cd kaldi
+git checkout 498b25db122ec68a96aee154b9d829030adfae4c
+cd ..
+
 # Prepare Kaldi
 cd kaldi/tools
 make clean

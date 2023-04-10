@@ -5,14 +5,14 @@ RUN DEBIAN_FRONTEND=noninteractive && \
 	apt-get install -y \
 		gcc g++ gfortran \
 		libc++-dev \
-		libstdc++-6-dev zlib1g-dev \
+		libstdc++-9-dev zlib1g-dev \
 		automake autoconf libtool \
 		git subversion \
 		libatlas3-base \
 		nvidia-cuda-dev \
 		ffmpeg \
 		python3 python3-dev python3-pip \
-		python python-dev python-pip \
+		python2 python2-dev \
 		wget unzip && \
 	apt-get clean
 
