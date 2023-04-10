@@ -5,7 +5,8 @@ FROM ubuntu:18.04
 
 # Add the NVIDIA repository key
 RUN apt-get update && apt-get install -y gnupg ca-certificates && \
-    apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+    apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub && \
+	apt-get update
 
 # Add the NVIDIA repository to the system
 RUN echo "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /" | tee /etc/apt/sources.list.d/cuda.list
