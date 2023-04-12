@@ -6,7 +6,7 @@ cd ..
 
 # Prepare Kaldi
 cd kaldi/tools
-make clean
+# make clean
 make
 ./extras/install_openblas.sh
 cd ../src
